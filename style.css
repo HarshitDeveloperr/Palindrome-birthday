@@ -1,0 +1,17 @@
+
+:root{
+    
+}
+.container{
+    text-align: center;
+}
+
+
+
+#check-btn{
+
+    cursor: pointer;
+    background-color:#f9a8d4;
+    border-radius: 1rem solid;
+}
+
