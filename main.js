@@ -149,10 +149,42 @@ var date = {
 
 const birthDateInput = document.querySelector("#birth-date");
 const checkButton = document.querySelector("#check-btn");
+const resultEl = document.querySelector("#result");
 
 
 function clickHandler(e){
-    console.log(birthDateInput.value);
+  
+  var bdayStr = birthDateInput.value;
+
+  if(bdayStr != " "){
+    var listOfDate = bdayStr.split("-");
+
+    var date = {
+       day : Number(listOfDate[2]),
+       month : Number(listOfDate[1]),
+       year : Number(listOfDate[0])
+    };
+
+
+    var isPalindrome = checkPalindromeForAllDateFormats(date);
+
+    if(isPalindrome){
+      resultEl.innerText = "Yay! your birthday is a palindrome!!🥳🥳";
+    }else{
+      var[ctr,nextDate] = getNextPalindromeDate(date);
+
+      resultEl.innerText = `The nearest palindrome date is
+       ${nextDate.day}-${nextDate.month}-${nextDate.year},
+        you missed by ${ctr} days.`;
+    }
+
+
+  };
+
+
+  
+
+
 }
 
 
