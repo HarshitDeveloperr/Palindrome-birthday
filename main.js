@@ -175,7 +175,7 @@ function clickHandler(e){
 
       resultEl.innerText = `The nearest palindrome date is
        ${nextDate.day}-${nextDate.month}-${nextDate.year},
-        you missed by ${ctr} days.`;
+        you missed by ${ctr} days.😔`;
     }
 
 
