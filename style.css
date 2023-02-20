@@ -12,6 +12,7 @@
 
     cursor: pointer;
     background-color:#f9a8d4;
-    border-radius: 1rem solid;
+    border-radius: 1rem solid white;
+    padding: 0.25rem;
 }
 
